@@ -23,10 +23,40 @@ box-shadow:0 5px 20px rgba(0,0,0,0.1);
 
 h2{
 text-align:center;
+margin-bottom:20px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:15px;
+background:#4CAF50;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.review{
+background:#f9f9f9;
+padding:15px;
+margin-top:15px;
+border-radius:8px;
+}
+
+.stars{
+color:gold;
+font-size:18px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -35,17 +65,45 @@ text-align:center;
 
 <h2>⭐ Отзывы посетителей</h2>
 
-<script src="https://utteranc.es/client.js"
-        repo="marinamatlashova33-ctrl/reviews"
-        issue-term="pathname"
-        label="review"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+<input id="name" placeholder="Ваше имя">
+
+<textarea id="review" placeholder="Напишите отзыв"></textarea>
+
+<select id="rating">
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<button onclick="addReview()">Отправить отзыв</button>
+
+<div id="reviews"></div>
 
 </div>
 
+<script>
+
+function addReview(){
+
+let name=document.getElementById("name").value
+let review=document.getElementById("review").value
+let rating=document.getElementById("rating").value
+
+let block=`
+<div class="review">
+<b>${name}</b>
+<div class="stars">${rating}</div>
+<p>${review}</p>
+</div>
+`
+
+document.getElementById("reviews").innerHTML+=block
+
+}
+
+</script>
+
 </body>
 </html>
-
