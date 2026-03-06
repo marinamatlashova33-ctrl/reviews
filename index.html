@@ -5,58 +5,30 @@
 <title>Отзывы</title>
 
 <style>
-
 body{
 font-family: Arial;
-background:#f4f6fb;
-padding:30px;
+background:#f5f7fb;
+padding:20px;
 }
 
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 background:white;
-padding:25px;
+padding:20px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 h2{
 text-align:center;
-margin-bottom:20px;
 }
 
-input, textarea{
-width:100%;
-padding:10px;
-margin-top:10px;
-border-radius:6px;
-border:1px solid #ccc;
+.email-field{
+display:none;
 }
-
-button{
-margin-top:15px;
-background:#4CAF50;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:6px;
-cursor:pointer;
-}
-
-.review{
-background:#f9f9f9;
-padding:15px;
-margin-top:15px;
-border-radius:8px;
-}
-
-.stars{
-color:gold;
-font-size:18px;
-}
-
 </style>
+
 </head>
 
 <body>
@@ -65,45 +37,16 @@ font-size:18px;
 
 <h2>⭐ Отзывы посетителей</h2>
 
-<input id="name" placeholder="Ваше имя">
-
-<textarea id="review" placeholder="Напишите отзыв"></textarea>
-
-<select id="rating">
-<option>⭐</option>
-<option>⭐⭐</option>
-<option>⭐⭐⭐</option>
-<option>⭐⭐⭐⭐</option>
-<option>⭐⭐⭐⭐⭐</option>
-</select>
-
-<button onclick="addReview()">Отправить отзыв</button>
-
-<div id="reviews"></div>
-
+<div id="cusdis_thread"
+data-host="https://cusdis.com"
+data-app-id="45bc6833-14e8-4e6b-ae0b-f52869bf288f"
+data-page-id="reviews"
+data-page-title="Отзывы">
 </div>
 
-<script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
-function addReview(){
-
-let name=document.getElementById("name").value
-let review=document.getElementById("review").value
-let rating=document.getElementById("rating").value
-
-let block=`
-<div class="review">
-<b>${name}</b>
-<div class="stars">${rating}</div>
-<p>${review}</p>
 </div>
-`
-
-document.getElementById("reviews").innerHTML+=block
-
-}
-
-</script>
 
 </body>
 </html>
