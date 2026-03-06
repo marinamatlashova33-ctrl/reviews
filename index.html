@@ -2,33 +2,26 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<title>Отзывы</title>
 
 <style>
 body{
-font-family: Arial, sans-serif;
+font-family: Arial;
 background:#f5f7fb;
 padding:20px;
 }
 
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
-}
-
-.review{
 background:white;
-padding:15px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.name{
-font-weight:bold;
-}
-
-.stars{
-color:#f5b301;
+h2{
+text-align:center;
 }
 </style>
 
@@ -38,23 +31,17 @@ color:#f5b301;
 
 <div class="container">
 
-<div class="review">
-<div class="name">Анна</div>
-<div class="stars">★★★★★</div>
-<div>Очень полезный сайт!</div>
+<h2>⭐ Отзывы посетителей</h2>
+
+<div id="cusdis_thread"
+data-host="https://cusdis.com"
+data-app-id="45bc6833-14e8-4e6b-ae0b-f52869bf288f"
+data-page-id="reviews"
+data-page-url="reviews"
+data-page-title="Отзывы">
 </div>
 
-<div class="review">
-<div class="name">Игорь</div>
-<div class="stars">★★★★☆</div>
-<div>Спасибо за материалы.</div>
-</div>
-
-<div class="review">
-<div class="name">Мария</div>
-<div class="stars">★★★★★</div>
-<div>Отличная информация для обучения.</div>
-</div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
 </div>
 
